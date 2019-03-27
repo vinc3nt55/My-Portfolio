@@ -18,8 +18,7 @@ class App extends Component {
             <Route path="https://vinc3nt55.github.io/My-Portfolio/about" component={About} />
             <Route path="https://vinc3nt55.github.io/My-Portfolio/skills" component={Skills} />
             <Route path="portfolio" component={Portfolio} />
-            
-            <Route component={ErrorPage} />
+            <Route path="/contactinfo" component={Contact} />
           </Switch>
         </BrowserRouter>
       </React.Fragment>
