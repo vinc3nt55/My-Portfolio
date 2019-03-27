@@ -14,11 +14,11 @@ class App extends Component {
       <React.Fragment>
         <BrowserRouter>
           <Switch>
-            <Route path="/My-Portfolio" component={Home} exact/>
-            <Route path="/https://vinc3nt55.github.io/My-Portfolio/about" component={About} />
-            <Route path="/https://vinc3nt55.github.io/My-Portfolio/skills" component={Skills} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/contactinfo" component={Contact} />
+            <Route path="https://vinc3nt55.github.io/My-Portfolio/" component={Home} exact />
+            <Route path="https://vinc3nt55.github.io/My-Portfolio/about" component={About} />
+            <Route path="https://vinc3nt55.github.io/My-Portfolio/skills" component={Skills} />
+            <Route path="portfolio" component={Portfolio} />
+            
             <Route component={ErrorPage} />
           </Switch>
         </BrowserRouter>
