@@ -40,7 +40,7 @@ class Home extends Component {
 								
 							/>
 						</div>
-						<NavLink to="/about">About</NavLink>
+						<NavLink to="/https://vinc3nt55.github.io/My-Portfolio/about">About</NavLink>
 					</div>
 					<div
 						className="card"
@@ -74,7 +74,7 @@ class Home extends Component {
 								content="video"
 							/>
 						</div>
-						<NavLink to="/portfolio">Portfolio</NavLink>
+						<NavLink to="/https://vinc3nt55.github.io/My-Portfolio/portfolio">Portfolio</NavLink>
 					</div>
 					<div
 						className="card"
@@ -89,7 +89,7 @@ class Home extends Component {
 								type="video/mp4"
 							/>
 						</div>
-						<NavLink to="/contactinfo">Contact Info</NavLink>
+						<NavLink to="/https://vinc3nt55.github.io/My-Portfolio/contactinfo">Contact Info</NavLink>
 					</div>
 				</div>
 			</React.Fragment>
