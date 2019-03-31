@@ -37,11 +37,10 @@ class Portfolio extends Component {
 							</div>
 						</div>
 					</div>
-					<div className="porfolio-to-home">
-						<NavLink to="/" className="home">
-							Home
-						</NavLink>
-					</div>
+					<NavLink to="/" className="hvr-icon-back">
+						<i class="fa fa-chevron-circle-left hvr-icon" />
+						Back
+					</NavLink>
 				</div>
 			</React.Fragment>
 		);

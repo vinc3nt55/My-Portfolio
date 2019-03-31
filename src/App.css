@@ -4,9 +4,52 @@
 }
 body {
 	font-family: Ariel, Helvetica, sans-serif;
+	background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
 }
 /*Global*/
-.about-to-home,
+/*animation*/
+.route-enter,
+.route-appear {
+	animation: slideIn 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.route-leave {
+	animation: slideOut 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.route-appear {
+	animation: slideUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes slideIn {
+	0% {
+		opacity: 0;
+		transform: translate3d(-50px, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes slideOut {
+	0% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		opacity: 0;
+		transform: translate3d(50px, 0, 0);
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 60px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
 .skills-to-home,
 .porfolio-to-home,
 .contact-to-home {
@@ -15,11 +58,6 @@ body {
 	align-items: center;
 }
 
-.about-container h1,
-.skills-container h1 {
-	text-align: center;
-	padding: 3rem;
-}
 .portfolio-container,
 .container-contact {
 	width: 1024px;
@@ -29,10 +67,36 @@ body {
 	align-items: center;
 	margin: 0 auto;
 }
+/* Icon Back */
+.hvr-icon-back {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.1s;
+	transition-duration: 0.1s;
+}
+.hvr-icon-back .hvr-icon {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition-duration: 0.1s;
+	transition-duration: 0.1s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.hvr-icon-back:hover .hvr-icon,
+.hvr-icon-back:focus .hvr-icon,
+.hvr-icon-back:active .hvr-icon {
+	-webkit-transform: translateX(-4px);
+	transform: translateX(-4px);
+}
 /*Global End*/
 /* Homepage */
 .home-container {
-	background-color: #413c3c99;
+	background-color: #00000099;
 	width: 100%;
 	height: 100vh;
 	display: grid;
@@ -42,7 +106,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid #222;
+	border: 0.3px solid #222;
 	font-size: 2rem;
 	overflow: hidden;
 }
@@ -53,17 +117,23 @@ body {
 	z-index: 2;
 }
 .card:hover {
-	background-color: #131a13cc;
+	background-color: #3e313157;
 	transition: 0.7s;
 }
 /*Homepage End*/
 /* About */
 .about-container {
 	max-width: 1024px;
-	height: 100vh;
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
+}
+.about-container h1 {
+	text-align: center;
+	padding: 3rem;
+}
+.about-container p {
+	padding-bottom: 2rem;
 }
 .img {
 	width: 200px;
@@ -75,53 +145,50 @@ body {
 	width: 100%;
 	height: 100%;
 }
-
-.home {
-	margin: 1rem;
-	background-color: #ccc;
-	text-decoration: none;
-	color: #222;
-	padding: 0.5rem 1rem;
-	transition: 0.5s;
-}
-.home:hover {
-	background-color: red;
-	color: #fff;
-}
 /*About End*/
 /*Skills*/
 /*Maybe add a module and pop up a little description about the technology?*/
 .skills-container {
-	max-width: 1024px;
+	width: 1024px;
+	height: 100vh;
 	margin: 0 auto;
 }
-
+.skills-container h1 {
+	text-align: center;
+	padding: 1rem;
+	color: #660066;
+}
 .skills-container div {
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
 }
-.skills-container ul {
-	list-style: none;
+
+.skills-container .skills-wrapper {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 10px;
+	grid-gap: 20px;
 	width: 100%;
 	height: 100%;
+	padding-bottom: 1rem;
 }
-.skills-container li {
+.skills-container .skill {
 	padding: 0.5rem 0rem;
 	font-size: 1.5rem;
-	background-color: #ccc;
+	background-color: #00ccff;
 	text-align: center;
-	padding: 0.7rem;
+	width: 100%;
+	/*height: 90%;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
 }
-.skills-container li p {
-	font-size: 0.9rem;
-	padding: 1.5rem;
-	letter-spacing: 1px;
-	line-height: 1.1rem;
-	text-align: left;
+.skills-container img {
+	width: 100px;
+	height: 100px;
 }
+
 /*Skills End*/
 /*Portfolio*/
 .portfolio-container h1 {
