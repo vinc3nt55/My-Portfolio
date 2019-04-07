@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import HTML5 from "./assets/html5-brands.svg";
-import CSS3 from "./assets/css3-alt-brands.svg";
-import Bootstrap from "./assets/bootstrap-brands.svg";
-import JS from "./assets/js-brands.svg";
-import ReactJS from "./assets/react-brands.svg";
-import Wordpress from "./assets/wordpress-brands.svg";
+// import HTML5 from "./assets/html5-brands.svg";
+// import CSS3 from "./assets/css3-alt-brands.svg";
+// import Bootstrap from "./assets/bootstrap-brands.svg";
+// import JS from "./assets/js-brands.svg";
+// import ReactJS from "./assets/react-brands.svg";
+// import Wordpress from "./assets/wordpress-brands.svg";
 import MaterialUI from "./assets/material-ui.png";
-import Sass from "./assets/sass-brands.svg";
+// import Sass from "./assets/sass-brands.svg";
 
 class Skills extends Component {
 	render() {

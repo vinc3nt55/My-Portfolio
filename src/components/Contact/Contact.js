@@ -1,25 +1,34 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class Contact extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="container-contact">
+				<ReactCSSTransitionGroup
+					component="div"
+					className="container-contact"
+					transitionName="route"
+					transitionEnterTimeout={600}
+					transitionLeaveTimeout={400}
+					transitionAppearTimeout={600}
+					transitionAppear={true}
+				>
 					<h1>CONTACT INFO</h1>
 					<div className="contact-info">
-						<div className="email">
-							<label>Email: </label>
+						<div className="contact">
 							<label>
+								Email:{" "}
 								<a href="mailto:dummy@gmail.com">
 									dummy@gmail.com
 								</a>
 							</label>
-						</div>
-						<div className="phone">
-							<label>Phone: </label>
 							<label>
-								<a href="about">0906-XXX-XXXX</a>
+								Skype ID: <Link href="about">vinc3nt55</Link>
+							</label>
+							<label className="resume">
+								Resume: <Link to="/resume">Resume</Link>
 							</label>
 						</div>
 						<div className="icons">
@@ -35,7 +44,7 @@ class Contact extends Component {
 						<i class="fa fa-chevron-circle-left hvr-icon" />
 						Back
 					</NavLink>
-				</div>
+				</ReactCSSTransitionGroup>
 			</React.Fragment>
 		);
 	}

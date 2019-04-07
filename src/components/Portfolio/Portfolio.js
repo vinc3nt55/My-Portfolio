@@ -1,39 +1,64 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class Portfolio extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="portfolio-container">
-					<h1>PORTFOLIO</h1>
+				<ReactCSSTransitionGroup
+					component="div"
+					className="portfolio-container"
+					transitionName="route"
+					transitionEnterTimeout={600}
+					transitionLeaveTimeout={400}
+					transitionAppearTimeout={600}
+					transitionAppear={true}
+				>
+					<h1>PROJECTS</h1>
 					<div className="wrapper">
 						<div className="hvr-float-shadow box">
-							Project 1{" "}
+							<span>Project 1</span>
 							<div className="project-links">
-								<Link to="/">Source Code</Link>
-								<Link to="/">Project</Link>
+								<Link className="project-link" to="/">
+									Code
+								</Link>
+								<Link className="project-link" to="/">
+									Project
+								</Link>
 							</div>
 						</div>
 						<div className="hvr-float-shadow box">
-							Project 2{" "}
+							<span>Project 2</span>
 							<div className="project-links">
-								<Link to="/">Source Code</Link>
-								<Link to="/">Project</Link>
+								<Link className="project-link" to="/">
+									Code
+								</Link>
+								<Link className="project-link" to="/">
+									Project
+								</Link>
 							</div>
 						</div>
 						<div className="hvr-float-shadow box">
-							Project 3{" "}
+							<span>Project 3</span>
 							<div className="project-links">
-								<Link to="/">Source Code</Link>
-								<Link to="/">Project</Link>
+								<Link className="project-link" to="/">
+									Code
+								</Link>
+								<Link className="project-link" to="/">
+									Project
+								</Link>
 							</div>
 						</div>
 						<div className="hvr-float-shadow box">
-							Project 4
+							<span>Project 4</span>
 							<div className="project-links">
-								<Link to="/">Source Code</Link>
-								<Link to="/">Project</Link>
+								<Link className="project-link" to="/">
+									Code
+								</Link>
+								<Link className="project-link" to="/">
+									Project
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -41,7 +66,7 @@ class Portfolio extends Component {
 						<i class="fa fa-chevron-circle-left hvr-icon" />
 						Back
 					</NavLink>
-				</div>
+				</ReactCSSTransitionGroup>
 			</React.Fragment>
 		);
 	}
