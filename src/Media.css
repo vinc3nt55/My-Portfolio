@@ -30,7 +30,7 @@
 	/*Skills*/
 	.skills-container .skills-wrapper {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(10, 1fr);
+		grid-template-rows: repeat(5, 1fr);
 		height: 61%;
 	}
 	.skill:nth-child(9) {
