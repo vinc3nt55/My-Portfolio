@@ -19,9 +19,6 @@ class About extends Component {
 				transitionAppear={true}
 			>
 				<div>
-					<div className="img">
-						<img src={Avatar} alt="Avatar" />
-					</div>
 					<h1>ABOUT ME</h1>
 					<p>
 						lorem ipsom Notice the use of %PUBLIC_URL% in the tags
@@ -45,3 +42,7 @@ class About extends Component {
 }
 
 export default About;
+
+// <div className="img">
+// 	<img src={Avatar} alt="Avatar" />
+// </div>

@@ -6,6 +6,10 @@ body {
 	font-family: Ariel, Helvetica, sans-serif;
 	background-color: #333333;
 }
+
+:root {
+	--text-color: #dadada;
+}
 /*Global*/
 /*Animation*/
 .route-enter,
@@ -53,11 +57,12 @@ body {
 .portfolio-container,
 .container-contact {
 	width: 1024px;
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin: 0 auto;
+	padding-bottom: 1rem;
 }
 /* Icon Back */
 .hvr-icon-back {
@@ -101,7 +106,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	text-decoration: none;
-	color: #fff;
+	color: var(--text-color);
 	font-size: 2.5rem;
 	border: 1px #222 solid;
 	background-color: #333333;
@@ -121,20 +126,22 @@ body {
 .about-container {
 	max-width: 1024px;
 	width: 90%;
+	height: 50vh;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	margin: 0 auto;
 }
 .about-container h1 {
 	text-align: center;
 	padding: 3rem;
-	color: #fff;
+	color: var(--text-color);
 }
 .about-container p {
 	padding-bottom: 2rem;
-	color: #fff;
+	color: var(--text-color);
 }
-.img {
+/*.img {
 	width: 170px;
 	height: 150px;
 	margin: 0 auto;
@@ -144,7 +151,7 @@ body {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-}
+}*/
 /*About End*/
 /*Skills*/
 /*Maybe add a module and pop up a little description about the technology?*/
@@ -156,7 +163,7 @@ body {
 .skills-container h1 {
 	text-align: center;
 	padding: 1rem;
-	color: #fff;
+	color: var(--text-color);
 }
 .skills-container div {
 	width: 100%;
@@ -196,11 +203,11 @@ body {
 /*Portfolio*/
 .portfolio-container h1 {
 	margin-top: 3rem;
-	color: #fff;
+	color: var(--text-color);
 }
 .wrapper {
 	width: 100%;
-	height: 60%;
+	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 1.5rem;
@@ -211,7 +218,7 @@ body {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	border: 1px solid #222;
 	background-position: center;
@@ -219,16 +226,22 @@ body {
 	background-repeat: no-repeat;
 }
 .wrapper .box:nth-child(1) {
-	background-image: url("./components/Portfolio/assets/git1.jpg");
-}
-.wrapper .box:nth-child(2) {
-	background-image: url("./components/Portfolio/assets/git2.jpg");
+	background-image: url("./components/Portfolio/assets/Info Form.png");
 }
 .wrapper .box:nth-child(3) {
-	background-image: url("./components/Portfolio/assets/git3.jpg");
+	background-image: url("./components/Portfolio/assets/NumbersFacts.png");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-.wrapper .box:nth-child(4) {
-	background-image: url("./components/Portfolio/assets/git4.jpg");
+.wrapper .box:nth-child(5) {
+	background-image: url("./components/Portfolio/assets/ImageFinder.png");
+	background-position: left;
+	background-repeat: no-repeat;
+	/*background-size: contain;*/
+}
+.wrapper .box:nth-child(7) {
+	background-image: url("./components/Portfolio/assets/MatchingGame.png");
 }
 /* Float Shadow */
 .hvr-float-shadow {
@@ -295,21 +308,23 @@ body {
 }
 .project-link {
 	text-decoration: none;
-	color: #fff;
+	color: var(--text-color);
 }
-.box span {
-	width: 93%;
-	text-align: center;
-	background-color: #fffc;
-	padding: 0.5rem;
-	font-size: 1.5rem;
-	font-weight: 700;
+/*description*/
+.description {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.description p {
+	color: var(--text-color);
 }
 /*Portfolio End*/
 /*Contact info*/
 .container-contact h1 {
 	margin: 3rem;
-	color: #fff;
+	color: var(--text-color);
 }
 .contact {
 	display: grid;
@@ -318,18 +333,26 @@ body {
 	justify-content: center;
 	align-items: center;
 	font-size: 1.5rem;
-	color: #fff;
+	color: var(--text-color);
 }
 .contact a {
 	text-decoration: none;
-	color: #ccc;
+	color: #fff;
+}
+.contact a:hover {
+	color: var(--text-color);
 }
 .icons div {
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 }
+.icon {
+	font-size: 6rem;
+	color: #fff;
+}
+
 .icons h1 {
 	border-bottom: 1px solid #fff;
 	font-weight: 100;
@@ -338,7 +361,7 @@ body {
 .contact-info {
 	padding-bottom: 2rem;
 }
-
+/*Contact info end*/
 /*Videos*/
 .video-container {
 	width: 50%;

@@ -19,24 +19,31 @@ class Contact extends Component {
 					<div className="contact-info">
 						<div className="contact">
 							<label>
-								Email:{" "}
+								Email:
 								<a href="mailto:dummy@gmail.com">
+									{" "}
 									dummy@gmail.com
 								</a>
 							</label>
 							<label>
-								Skype ID: <Link href="about">vinc3nt55</Link>
+								Skype ID: <a href="/">vinc3nt55</a>
 							</label>
 							<label className="resume">
-								Resume: <Link to="/resume">Resume</Link>
+								Resume: <Link to="/resume">PDF</Link>
 							</label>
 						</div>
 						<div className="icons">
 							<h1>Check Me Out At</h1>
 							<div>
-								<div>Github Icon</div>
-								<div>Codepen Icon</div>
-								<div>FCC Icon</div>
+								<a className="icon" href="/about">
+									<i class="fab fa-github" />
+								</a>
+								<a className="icon" href="/about">
+									<i class="fab fa-codepen" />
+								</a>
+								<a className="icon" href="/about">
+									<i class="fab fa-free-code-camp" />
+								</a>
 							</div>
 						</div>
 					</div>
